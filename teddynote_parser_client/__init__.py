@@ -6,5 +6,5 @@ TeddyNote Parser Client Package
 
 from teddynote_parser_client.client import TeddyNoteParserClient
 
-__version__ = "0.1.0"
+__version__ = "0.0.1"
 __author__ = "teddylee777"

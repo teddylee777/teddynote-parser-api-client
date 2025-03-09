@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "teddynote-parser-client"
-version = "0.1.0"
+version = "0.0.1"
 description = "TeddyNote Parser API 클라이언트 라이브러리"
 readme = "README.md"
 authors = [
@@ -44,8 +44,8 @@ dev = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/teddylee777/teddynote-parser-client"
-"Bug Tracker" = "https://github.com/teddylee777/teddynote-parser-client/issues"
+"Homepage" = "https://github.com/teddylee777/teddynote-parser-api-client"
+"Bug Tracker" = "https://github.com/teddylee777/teddynote-parser-api-client/issues"
 
 [project.scripts]
 teddynote-parser = "teddynote_parser_client.cli:main"
