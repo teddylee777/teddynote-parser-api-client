@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "teddynote-parser-client"
+version = "0.1.0"
+description = "TeddyNote Parser API 클라이언트 라이브러리"
+readme = "README.md"
+authors = [
+    {name = "teddylee777", email = "teddylee777@gmail.com"},
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["pdf", "parser", "api", "client", "teddynote"]
+dependencies = [
+    "jupyter>=1.1.1",
+    "langchain>=0.0.27",
+    "notebook>=6.5.7",
+    "pandas>=1.1.5",
+    "python-dotenv>=0.21.1",
+    "requests>=2.25.0",
+]
+requires-python = ">=3.7"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.1.0",
+    "isort>=5.10.1",
+    "mypy>=0.942",
+    "ruff>=0.0.186",
+    "build>=0.8.0",
+    "twine>=4.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/teddylee777/teddynote-parser-client"
+"Bug Tracker" = "https://github.com/teddylee777/teddynote-parser-client/issues"
+
+[project.scripts]
+teddynote-parser = "teddynote_parser_client.cli:main"
+
+[tool.setuptools]
+packages = ["teddynote_parser_client"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.black]
+line-length = 88
+target-version = ["py37", "py38", "py39", "py310"]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "I", "N", "UP", "ANN", "BLE", "C4", "SIM", "TID"]
+ignore = ["ANN101", "ANN102"]
+target-version = "py37"
+exclude = [
+    ".git",
+    ".venv",
+    "venv",
+    "build",
+    "dist",
+]
+
+[tool.mypy]
+python_version = "3.7"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+strict_optional = true 

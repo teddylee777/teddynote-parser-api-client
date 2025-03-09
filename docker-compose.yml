@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  teddynote-parser-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: teddylee777/teddynote-parser-api:latest
+    container_name: teddynote-parser-api
+    restart: unless-stopped
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      - ${DATA_VOLUME:-./data}:/app/data
+      - ${RESULT_VOLUME:-./result}:/app/result
+      - ${UPLOADS_VOLUME:-./uploads}:/app/uploads
+      - ./.env:/app/.env
+    environment:
+      - UPSTAGE_API_KEY=${UPSTAGE_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - TZ=Asia/Seoul
+      - PORT=${PORT}
+      - RUN_MODE=api
+      - DATA_VOLUME=${DATA_VOLUME}
+      - RESULT_VOLUME=${RESULT_VOLUME}
+      - UPLOADS_VOLUME=${UPLOADS_VOLUME}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${PORT}/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 4G
+        reservations:
+          cpus: '0.5'
+          memory: 1G
+    command: ["api"] 
