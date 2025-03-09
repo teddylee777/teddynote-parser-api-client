@@ -2,6 +2,14 @@
 
 TeddyNote Parser API를 사용하기 위한 Python 클라이언트 라이브러리입니다.
 
+## 바로가기
+
+- [예제 코드: PDF 파싱 실습 노트북](example/parse_pdf.ipynb)
+- [API 서버 실행 가이드](#teddynote-parser-api-서버-실행하기)
+- [클라이언트 설치 방법](#설치)
+- [클라이언트 사용 예시](#사용-방법)
+- [API 참조 문서](#api-참조)
+
 ## TeddyNote Parser API 서버 실행하기
 
 먼저 TeddyNote Parser API 서버를 Docker Compose를 사용하여 실행합니다.
@@ -66,6 +74,8 @@ pip install teddynote-parser-client
 ```
 
 ## 사용 방법
+
+> 💡 **Jupyter Notebook 예제**: 실제 사용 예시는 [example/parse_pdf.ipynb](example/parse_pdf.ipynb) 노트북에서 확인할 수 있습니다. 이 노트북은 PDF 파일 파싱 과정을 단계별로 보여줍니다.
 
 ### 1. 환경 변수 설정
 
