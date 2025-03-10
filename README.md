@@ -2,6 +2,9 @@
 
 TeddyNote Parser API를 사용하기 위한 Python 클라이언트 라이브러리입니다.
 
+> Parser 구조 예시
+![](./assets/teddynote-parser.png)
+
 ## 바로가기
 
 - [예제 코드: PDF 파싱 실습 노트북](example/parse_pdf.ipynb)
@@ -32,7 +35,7 @@ UPSTAGE_API_KEY=your-key-here  # UPSTAGE API 키
 OPENAI_API_KEY=your-key-here   # OpenAI API 키
 
 # 볼륨 경로 설정 (선택 사항, 절대 경로 권장)
-# macOS 예시 (Documents 폴더):
+# macOS 예시 (Documents 폴더)
 DATA_VOLUME=/Users/username/Documents/teddynote/data
 RESULT_VOLUME=/Users/username/Documents/teddynote/result
 UPLOADS_VOLUME=/Users/username/Documents/teddynote/uploads
