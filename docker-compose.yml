@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: teddylee777/teddynote-parser-api:latest
+    image: teddylee777/teddynote-parser-api:v0.2.0
     container_name: teddynote-parser-api
     restart: unless-stopped
     ports:
